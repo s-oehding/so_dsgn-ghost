@@ -1,0 +1,36 @@
+
+/**
+* Include Bower Components
+*************/
+@import '../bower/foundation-sites/scss/util/util';
+@import 'foundation-settings';
+@import '../bower/foundation-sites/scss/foundation';
+@import '../bower/motion-ui/src/motion-ui';
+
+@include foundation-everything;
+
+@import "animation_setting";
+@import '../bower/animate-sass/animate';
+@import '../bower/owl.carousel/src/scss/owl.carousel';
+@import '../bower/owl.carousel/src/scss/owl.theme.default';
+@import '../bower/font-awesome/scss/font-awesome';
+
+/**
+* Include Theme Components
+*************/
+@import "mixins/mixins";
+
+@import "components/header";
+@import "components/hero";
+@import "components/navigation";
+@import "components/loop";
+@import "components/post";
+@import "components/sections";
+@import "components/footer";
+
+@import "modules/preloader";
+@import "modules/nprogress";
+@import "modules/video";
+@import "modules/typo";
+@import "modules/slider";
+@import "modules/services";

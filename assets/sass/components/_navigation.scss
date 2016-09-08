@@ -1,0 +1,58 @@
+/*********************
+NAVIGATION STYLES
+*********************/
+body{
+	&:not(.home-template) {
+		.top-bar{
+		background: rgba(255,255,255, 0.9);
+		}
+	}
+}
+.top-bar {
+	width:100%;
+	.title-area {
+		z-index: 1;
+	}
+	&.scrolled{
+		background: rgba(255,255,255, 0.9);
+		&:hover{
+			background: rgba(255,255,255, 1);
+		}
+	}
+	.menu{
+		.menu-item{
+			a{
+				color: $black;
+				border-bottom: 2px solid transparent;
+				@include transition(all 0.5s ease-in-out);
+				&.active{
+					color: $primary-color;
+					border-bottom:2px solid $primary-color;
+					@include transition(all 0.5s ease-in-out);
+				}
+				&:hover{
+					color: $primary-color;
+					border-bottom:2px solid $primary-color;
+					@include transition(all 0.5s ease-in-out);
+				}
+			}
+		}
+	}
+	@include transition(all 0.5s ease-in-out);
+}
+
+@media screen and (max-width: 39.9375em) {
+	.top-bar{
+		background: rgba(255, 255, 255, .9);
+	}
+}
+
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
+
+  .title-bar {
+    display: none;
+  }
+}

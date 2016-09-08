@@ -1,0 +1,51 @@
+/*********************
+GLOBAL SECTION STYLES
+*********************/
+#main{
+    min-height: 100vh;
+}
+section {
+    width: 100%;
+    &.layout-row-top{
+        padding: 5rem 0;
+        min-height: rem-calc(450);
+        @include flex-grid-row();
+        @include flex-align(justify, top);
+    }
+
+    &.layout-row-center{
+        padding: 5rem 0;
+        min-height: rem-calc(450);
+        @include flex-grid-row();
+        @include flex-align(justify, middle);
+    }
+
+    .section-content {
+        padding: 8 rem 0;
+        // height:100vh;
+    }
+}
+
+.dark {
+    background: $black;
+    color: $white;
+    blockquote {
+        p {
+            color: $white;
+        }
+    }
+}
+
+.border-left {
+    border-left: 4 px solid $primary-color;
+    padding-left: .5 rem;
+    padding-right: .5 rem;
+    margin-bottom: 2 rem;
+}
+
+.border-right {
+    border-right: 4 px solid $primary-color;
+    padding-left: .5 rem;
+    padding-right: .5 rem;
+    margin-bottom: 2 rem;
+}

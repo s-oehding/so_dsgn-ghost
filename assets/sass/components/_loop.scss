@@ -1,0 +1,24 @@
+section {
+    &.feed {
+        article {
+        	margin-bottom: rem-calc(30);
+            .post-title {
+                position: relative;
+                display: inline-block;
+            }
+            .post-content {
+            	margin-bottom: rem-calc(10);
+            }
+            .post-link {
+                position: relative;
+            }
+            .post-meta {
+                font-size: rem-calc(12);
+                margin-bottom: rem-calc(10);
+                .date {}
+                .author {}
+                .tags {}
+            }
+        }
+    }
+}

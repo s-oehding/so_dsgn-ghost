@@ -1,0 +1,84 @@
+/*********************
+PARALLAX STYLES
+*********************/
+.parallax-window {
+    min-height: calc(100vh + 3.4375rem);
+    background: transparent;
+    margin-top: rem-calc(-55);
+}
+
+.header-image{
+	position:relative;
+	width: 100%;
+	height: auto;
+
+	.header-image-overlay{
+		position: absolute;
+		width: auto;
+		height: auto;
+		z-index: 99;
+		top: 61%;
+		left: 60%;
+		p{
+			font-size: 1rem;
+		}
+
+		.header-image-text{
+			color: $black;
+		}
+	}
+}
+
+.post-header,
+.hero-wrapper{
+	position:relative;
+
+	.header-image-overlay{
+		position: absolute;
+		width: auto;
+		height: auto;
+		z-index: 99;
+		top: 61%;
+		left: 60%;
+		p{
+			font-size: 1rem;
+		}
+
+		.header-image-text{
+			color: $black;
+		}
+	}
+}
+
+.arrow-down{
+	position: absolute;
+	text-align: center;
+	top: 85%;
+	left:50%;
+	i{
+		font-size: 1.5rem;
+		color: $black;
+	}
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

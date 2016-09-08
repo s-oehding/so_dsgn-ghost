@@ -1,0 +1,38 @@
+/*********************
+FOOTER STYLES
+*********************/
+#site-footer {
+	background:$black;
+	clear: both;
+	color: $dark-gray;
+	margin-top: 1em;
+	.footer-title{
+		color: $primary-color;
+	}
+
+	#inner-footer{
+		padding-top: 3rem;
+
+		.menu{
+			li{
+				a{
+					padding:.25rem;
+					display: inline-flex;
+					color: $dark-gray;
+					@include transition(color, 0.2s, ease-in-out);
+					&:hover{
+						color: $primary-color;
+					}
+				}
+				i{
+					width: 1.5rem;
+					display: inline-block;
+					color: $primary-color;
+				}
+				span{
+					padding: .25rem;
+				}
+			}
+		}
+	}
+}

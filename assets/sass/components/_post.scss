@@ -1,0 +1,31 @@
+/*********************
+PARALLAX STYLES
+*********************/
+
+.post-header {
+    position: relative;
+    .parallax-window {
+        top: 0;
+        min-height: 65vh;
+        height: 65vh;
+        background: transparent;
+        margin-top: 0;
+        position: relative;
+    }
+    .post-title {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        text-align: center;
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    }
+}
+
+.post-title {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}

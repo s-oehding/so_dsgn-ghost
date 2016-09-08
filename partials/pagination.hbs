@@ -1,0 +1,11 @@
+<nav class="small-12 columns">
+	<ul class="pagination" role="navigation" aria-label="Pagination">
+		{{#if prev}}
+		  <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+		{{/if}}
+		  <li class="current"><span class="">You're on Page {{page}}</span> of {{pages}}</li>
+		  {{#if next}}
+		  <li class="pagination-next"><a href="{{page_url next}}" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+		  {{/if}}
+	</ul>
+</nav>
