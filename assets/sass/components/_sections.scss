@@ -6,6 +6,10 @@ GLOBAL SECTION STYLES
 }
 section {
     width: 100%;
+    background: $body-background;
+    &.has-parallax{
+        background:transparent;
+    }
     &.layout-row-top{
         padding: 5rem 0;
         min-height: rem-calc(450);
@@ -24,14 +28,21 @@ section {
         padding: 8 rem 0;
         // height:100vh;
     }
-}
 
-.dark {
-    background: $black;
-    color: $white;
-    blockquote {
-        p {
-            color: $white;
+    &.row-slider{
+        padding: 5rem 0;
+        min-height: rem-calc(450);
+        @include flex-grid-row();
+        @include flex-align(justify, top);
+        max-width: 80%;
+    }
+    &.dark {
+        background: $black;
+        color: $white;
+        blockquote {
+            p {
+                color: $white;
+            }
         }
     }
 }
@@ -48,4 +59,13 @@ section {
     padding-left: .5 rem;
     padding-right: .5 rem;
     margin-bottom: 2 rem;
+}
+
+.shadow {
+    -moz-box-shadow:    inset  0  8px 8px -8px $black, 
+                        inset  0 -8px 8px -8px $black;
+    -webkit-box-shadow: inset  0  8px 8px -8px $black, 
+                        inset  0 -8px 8px -8px $black;
+     box-shadow:        inset  0  8px 8px -8px $black, 
+                        inset  0 -8px 8px -8px $black;
 }

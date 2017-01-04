@@ -1,31 +1,39 @@
 <div id="top" class="post-header">
-    {{!-- <div class="header-image parallax-window" data-parallax="scroll" {{#if image}} data-image-src="{{image}}" {{else}}data-image-src="http://placekitten.com/g/4096/2304" {{/if}}></div>    --}}
-    <img class="parallax-background" {{#if image}} src="{{image}}" {{else}} src="http://placekitten.com/g/1920/1080" {{/if}} alt="">
-    <div class="post-title os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.25s">
-        <h1 class="">{{{name}}}</h1>
-    </div>
+{{#tag}}
+    <div class="header-image parallax-window" data-parallax="scroll" {{#if image}} data-image-src="{{image}}" {{else}}data-image-src="http://placekitten.com/g/1920/1080" {{/if}}></div>
+    <section class="meta">
+        <div class="post-title-content os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.25s">
+            <h1 class="">{{{title}}}</h1><h1 class="">{{{name}}}</h1>
+        </div>
+        <hr>
+    </section>
+    {{/tag}}
 </div>
 <section id="feed" class="layout-row-center feed">
     {{#foreach posts}}
     <article class="row {{post_class}}">
-        <div class="medium-5 columns post-image">
-            <a href="{{url}}" class="post-link">
-                <img src="{{image}}" alt="">
-            </a>
-        </div>
-        <div class="medium-7 columns">
-            <section class="post-content">
-                <h2 class="post-title">{{{title}}}</h2>
-                {{excerpt words=25}}…
-            </section>
-            <section class="post-meta callout">
-                <span class="date"><i class="fa fa-clock-o"></i> <a href="{{url}}"><time class="timesince" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMMM YYYY'}}">{{date published_at timeago='true'}}</time></a></span>
-                {{#author}}<span class="author"><i class="fa fa-user"></i> <a href="{{url}}">{{name}}</a></span>{{/author}}
-                {{#if tags}}<span class="tags"><i class="fa fa-tags"></i>
-                    <span>
-                    {{tags prefix="" separator=", "}}</span>
-                </span>{{/if}}
-            </section>
+        <div class="card" data-equalizer-watch>
+            <div class="medium-5 columns post-image no-pad">
+                <div class="card-image">
+                    <a href="{{url}}" class="post-link" title="{{{title}}}" alt="{{{title}}}">
+                        <img src="{{image}}" title="{{{title}}}" alt="{{{title}}}">
+                    </a>
+                </div>
+            </div>
+            <div class="card-content medium-7 columns">
+                <section class="post-content">
+                    <a href="{{url}}" class="post-link" title="{{{title}}}" alt="{{{title}}}"><h2 class="post-title">{{{title}}}</h2></a>
+                    {{excerpt words=25}}…
+                </section>
+                <section class="post-meta callout">
+                    <span class="date"><i class="fa fa-clock-o"></i> <a href="{{url}}"><time class="timesince" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMMM YYYY'}}">{{date published_at timeago='true'}}</time></a></span>
+                    {{#author}}<span class="author"><i class="fa fa-user"></i> <a href="{{url}}">{{name}}</a></span>{{/author}}
+                    {{#if tags}}<span class="tags"><i class="fa fa-tags"></i>
+                        <span>
+                        {{tags prefix="" separator=", "}}</span>
+                    </span>{{/if}}
+                </section>
+            </div>
         </div>
     </article>
     {{~/foreach}}

@@ -4,3 +4,21 @@
 	display:block;
 	z-index: 9999;
 }
+
+.no-js .top-bar {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
+
+  .title-bar {
+    display: none;
+  }
+
+  .no-js .title-bar {
+    display: none;
+  }
+}

@@ -1,51 +1,71 @@
 <footer id="site-footer" role="contentinfo">
     <div id="inner-footer" class="row">
         <div class="large-3 medium-6 small-12 columns">
-            <h5 class="footer-title">Sitemap</h5>
-            <div class="menu-container">
-                <ul id="menu-sitemap" class="menu vertical">
-                    <li id="menu-item-127" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-127"><a href="#top">Home</a></li>
-                    <li id="menu-item-128" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-128"><a href="#welcome-text">Welcome</a></li>
-                    <li id="menu-item-129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="#portfolio">Portfolio</a></li>
-                    <li id="menu-item-142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142"><a href="#services">Leistungen</a></li>
-                    <li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="#contact">Kontakt</a></li>
-                </ul>
-            </div>
+            <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                <li class="accordion-item is-active" data-accordion-item>
+                    <a href="#" class="accordion-title footer-title">Sitemap</a>
+                    <div class="accordion-content" data-tab-content>
+                        <ul id="menu-sitemap" class="menu vertical">
+                            <li class="menu-item"><a href="#top">Home</a></li>
+                            <li class="menu-item"><a href="#welcome-text">Welcome</a></li>
+                            <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+                            <li class="menu-item"><a href="#services">Leistungen</a></li>
+                            <li class="menu-item"><a href="#contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
         <div class="large-3 medium-6 small-12 columns">
-            <h5 class="footer-title">Info</h5>
-            <div class="menu-info-container">
-                <ul id="menu-info" class="menu vertical">
-                    <li id="menu-item-212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212"><a href="https://so-dsgn.de/datenschutz/">Datenschutzerklärung</a></li>
-                    <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://so-dsgn.de/impressum/">Impressum</a></li>
-                </ul>
-            </div>
+            <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                <li class="accordion-item is-active" data-accordion-item>
+                    <a href="#" class="accordion-title footer-title">Info</a>
+                    <div class="accordion-content" data-tab-content>
+                        <ul id="menu-info" class="menu vertical">
+                            <li class="menu-item"><a href="https://so-dsgn.de/datenschutz/">Datenschutzerklärung</a></li>
+                            <li class="menu-item"><a href="https://so-dsgn.de/impressum/">Impressum</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
         <div class="large-3 medium-6 small-12 columns">
-            <h5 class="footer-title">Büro</h5>
-                <div itemscope="" itemtype="http://schema.org/Organization">
-                    <ul class="menu vertical">
-                        <li><span itemprop="name">SO_DSGN</span></li>
-                    </ul>
-                    <ul class="menu vertical" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                        <li><span>Sören Oehding</span>
-                        </li>
-                        <li><span itemprop="streetAddress">Lessingstrasse 12 - 14</span></li>
-                        <li><span itemprop="postalCode">69115</span><span itemprop="addressLocality"> Heidelberg</span></li>
-                    </ul>
-                </div>
+            <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                <li class="accordion-item is-active" data-accordion-item>
+                    <a href="#" class="accordion-title footer-title">Büro</a>
+                    <div class="accordion-content" data-tab-content>
+                        <div itemscope="" itemtype="http://schema.org/Organization">
+                            <ul class="menu vertical">
+                                <li><div itemprop="name">SO_DSGN</div></li>
+                            </ul>
+                            <ul class="menu vertical" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                                <li><div>Sören Oehding</div>
+                                </li>
+                                <li><div itemprop="streetAddress">Lessingstrasse 12 - 14</div></li>
+                                <li><div itemprop="postalCode">69115</div><div itemprop="addressLocality"> Heidelberg</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
         <div class="large-3 medium-6 small-12 columns">
-            <h5 class="footer-title">Projekt starten</h5>
-                <ul class="menu vertical">
-                    <li menu-item=""><i class="fa fa-phone"></i> <a href="tel:+4917661330934">+49 176 61330934</a></li>
-                    <li menu-item=""><i class="fa fa-envelope"></i> <a href="mailto:info@so-dsgn.de">info@so-dsgn.de</a></li>
-                    <li menu-item=""><i class="fa fa-globe"></i> <a href="http://so-dsgn.de">http://so-dsgn.de</a></li>
-                </ul>
-                <br>
-                <ul class="menu vertical">
-                    {{> social-links    }}
-                </ul>
+            <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                <li class="accordion-item is-active" data-accordion-item>
+                    <a href="#" class="accordion-title footer-title">Connect</a>
+                    <div class="accordion-content" data-tab-content>
+                        <ul class="menu vertical">
+                            <li menu-item=""><i class="fa fa-phone"></i> <a href="tel:+4917661330934">+49 176 61330934</a></li>
+                            <li menu-item=""><i class="fa fa-envelope"></i> <a href="mailto:info@so-dsgn.de">info@so-dsgn.de</a></li>
+                            <li menu-item=""><i class="fa fa-globe"></i> <a href="http://so-dsgn.de">http://so-dsgn.de</a></li>
+                        </ul>
+                        <br>
+                        <ul class="menu vertical">
+                            {{> social-links }}
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
         <div class="large-12 medium-12 columns">
             <p class="source-org copyright"><small>Built with&nbsp;<i class="fa fa-heart"></i>&nbsp;and&nbsp;<i class="fa fa-snapchat-ghost"></i>&nbsp;by&nbsp;<a href="https://github.com/s-oehding">&nbsp;Søren&nbsp;Oehding</a>&nbsp;SO_DSGN.&nbsp;©&nbsp;2016</small></p>

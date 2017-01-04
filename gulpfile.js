@@ -39,10 +39,10 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src('assets/js/**/*.js')
+  return gulp.src('assets/js/vendor/**/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
-    .pipe(concat('main.js'))
+    .pipe(concat('vendor.js'))
     .pipe(gulp.dest('assets/dist/js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())

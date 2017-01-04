@@ -1,22 +1,22 @@
-<section class="layout-row-center">
+<section class="row-slider">
     <div class="small-12 columns ml-slider owl-carousel owl-theme">
         {{#foreach posts}}
             {{#has tag="portfolio"}}
             <article class="slider-item {{post_class}}">
                 {{#if image}}
                 <a href="{{url}}" class="post-image">
-                    <img src="{{image}}" alt="">
+                    <img class="slider-image" src="{{image}}" alt="">
                     <span class="title-wrapper">
                         <h2 class="post-title">{{{title}}}</h2>
                     </span>
                 </a>{{else}}
                 <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
                 {{/if}}
-                <section class="post-meta callout">
-                    <span class="date"><i class="fa fa-clock-o"></i> <a href="{{url}}"><time class="timesince" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMMM YYYY'}}">{{date published_at timeago='true'}}</time></a></span>
-                    {{#author}}<span class="author"><i class="fa fa-user"></i> <a href="{{url}}">{{name}}</a></span>{{/author}}
+                <section class="post-meta">
+{{!--                     <span class="date"><i class="fa fa-clock-o"></i> <a href="{{url}}"><time class="timesince" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMMM YYYY'}}">{{date published_at timeago='true'}}</time></a></span>
+                    {{#author}}<span class="author"><i class="fa fa-user"></i> <a href="{{url}}">{{name}}</a></span>{{/author}} --}}
                     {{#if tags}}
-                    <hr>
+                    {{!-- <hr> --}}
                     <span class="tags">
                         <div class="tags small button-group">
                             <i class="label fa fa-tags"></i>

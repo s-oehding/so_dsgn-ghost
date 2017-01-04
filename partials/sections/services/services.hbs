@@ -1,12 +1,12 @@
-<section class="layout-row-top animation-container">
+<section class="layout-row-top animation-container" data-equalizer data-equalize-on="medium" id="test-eq">
 	{{#foreach posts}}
 		{{#has tag="services"}}
-	        <article class="small-12 medium-6 large-4 columns service-item os-animation-stack" data-os-animation="fadeInUp" data-os-animation-delay="1.{{@number}}s">
-			    <div class="row">
-			        <div class="small-4 columns service-icon">
+	        <article class="small-12 medium-6 large-4 columns service-item os-animation-stack" data-os-animation="fadeInUp" data-os-animation-delay="1s">
+			    <div class="card" data-equalizer-watch>
+			        <div class="card-image  service-icon">
 			            <img src="{{image}}" alt="{{{title}}}">
 			        </div>
-			        <div class="small-8 columns service-description">
+			        <div class="card-content">
 			            <h4 class="portfolio-item-title">{{{title}}}<hr class="h-line"></h4>
 			            {{{content}}}
 			        </div>

@@ -1,12 +1,19 @@
 .ml-slider {
     .slider-item {
-        padding: .25rem;
+        position:relative;
+        overflow: hidden;
+        @include transition(all 0.5s ease-in-out);
         .post-image {
             display: inline-block;
             overflow: hidden;
             position: relative;
+            height: 350px;
+            width: auto;
+            background-size: cover;
             img {
                 @include transition(all 0.5s ease-in-out);
+                height: 100%;
+                object-fit: cover;
             }
 
             .title-wrapper{
@@ -25,9 +32,35 @@
                 }
             }
         }
+        .post-title {
+            position: absolute;
+            width: 100%;
+            top: 33%;
+        }
         .post-meta {
+            background: $white;
+            padding: rem-calc(20);
+            position: absolute;
+            transform: translateY(100%);
+            z-index: 600;
+            @include transition(all 0.5s ease-in-out);
             .label {
                 margin-right: rem-calc(2.5);
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                left: -5%;
+                top: -2rem;
+                width: 110%;
+                height: 5em;
+                background: #fff;
+                border-top: 4px solid $primary-color;
+                // box-shadow: 0 0 2em rgba(0,0,0,0.2);
+                -webkit-transform: rotate(-2.5deg);
+                transform: rotate(-2.5deg);
+                @include transition(all 0.5s ease-in-out);
+                z-index: -1;
             }
         }
         &:hover {
@@ -38,6 +71,9 @@
             	img{
             		transform: scale(1.1);
             	}
+            }
+            .post-meta{
+                transform: translateY(-100%);
             }
         }
     }

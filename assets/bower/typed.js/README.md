@@ -1,11 +1,9 @@
-Typed.js
+<img src="/logo-cropped.png" width="450px" title="Typed.js" />
 ========
 
 [View the live demo](http://www.mattboldt.com/demos/typed-js/) | [Go to my site, mattboldt.com](http://www.mattboldt.com)
 
 Typed.js is a jQuery plugin that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.
-
----
 
 Looking for some custom use cases for Typed.js? [Check out the wiki](https://github.com/mattboldt/typed.js/wiki)
 
@@ -37,7 +35,6 @@ This is really all you need to get going.
 bower install typed.js
 ~~~
 
-
 Want the animated blinking cursor? Add this CSS.
 
 ~~~ scss
@@ -63,6 +60,35 @@ Want the animated blinking cursor? Add this CSS.
 	100% { opacity:1; }
 }
 ~~~
+
+Wonderful sites using Typed.js
+---
+https://slack.com/
+
+https://envato.com/
+
+https://productmap.co/
+
+https://www.typed.com/
+
+https://git.market/
+
+http://allison.house/404
+
+http://www.maxcdn.com/
+
+https://commando.io/
+
+http://testdouble.com/agency.html
+
+http://www.stephanemartinw.com/
+
+http://www.trelab.fi/en/
+
+http://jessejohnson.github.io/
+
+
+---
 
 ### HTML tags
 
@@ -151,6 +177,8 @@ Customization
 			startDelay: 0,
 			// backspacing speed
 			backSpeed: 0,
+			// shuffle the strings
+ +        		shuffle: false,
 			// time before backspacing
 			backDelay: 500,
 			// loop
@@ -205,27 +233,6 @@ Want to get really custom? On my site and in the Typed.js demo I have the code t
 ~~~
 
 This checks if the `arrayPos` is `1`, which would be the second string you entered. If so, it sets `stopNum` to `3` instead of `0`, which tells it to stop when there are 3 characters left. For now you'll have to create custom `if` statements for each specific case you want. I may automate this somehow in the future.
-
-
-Wonderfull sites using Typed.js
----
-http://allison.house/404
-
-http://www.maxcdn.com/
-
-https://commando.io/
-
-http://testdouble.com/agency.html
-
-http://www.stephanemartinw.com/
-
-http://www.trelab.fi/en/
-
-http://jessejohnson.github.io/
-
-http://patrickelhage.com/
-
-http://tairemadailey.com/
 
 
 ## Development
