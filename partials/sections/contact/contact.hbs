@@ -1,26 +1,49 @@
 <section class="layout-row-top">
-  <div class="large-12 columns">
-    <h3 class="portfolio-item-title">Kontakt<hr class="h-line"></h3>
+    <div class="large-12 columns">
+        <h3 class="portfolio-item-title">Kontakt<hr class="h-line"></h3>
     </div>
-<div class="large-12 columns">
-    <form method="post" action="contact.html" style="margin-top: 3rem;">
-      <div class="row">
-        <div class="large-12 columns">
-
-            <input type="text" placeholder="Name">
-            <input name="email" type="email" placeholder="Email">
-            <select name="division">
-              <option value="platforms">Bridge Platforms</option>
-              <option value="scaffolding">Scaffolding</option>
-              <option value="climbers">Mast Climbers</option>
-              <option value="other">Other</option>
-            </select>
-            <textarea name="message" placeholder="Message"></textarea>
-            <input id="submit" name="submit" type="submit" value="Submit" class="button">
-        </div>
-
-      </div>
-    </form>
-
-  </div>
+    <div class="large-12 columns">
+        <form id="mailForm" method="post" action="javascript:mailCatch();" style="margin-top: 3rem;">
+            <div class="row">
+                <div class="large-12 columns">
+                    <input type="text" placeholder="Name">
+                    <input name="email" type="email" placeholder="Email">
+                    <label for="subject">Betreff</label>
+                    <select name="subject">
+                        <option value="quote">Anfrage</option>
+                        <option value="ecommerce">E-Commerce</option>
+                        <option value="gdesign">Grafikdesign</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <input id="submit" name="submit" type="submit" value="Submit" class="button">
+                </div>
+            </div>
+        </form>
+    </div>
 </section>
+
+<div class="reveal" id="modal" data-reveal>
+  <h1>Mailcatcher</h1>
+  <p class="lead">This is the content:</p>
+  <pre id="modalContent">Mail Body</pre>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<script type="text/javascript">
+function mailCatch() {
+    var elements = document.getElementById("mailForm").elements;
+    var obj ={};
+    for(var i = 0 ; i < elements.length ; i++){
+        var item = elements.item(i);
+        obj[item.name] = item.value;
+    }
+
+    var $modal = $('#modal');
+    var $modalContent = $('#modalContent');
+    $modalContent.append(JSON.stringify(obj));
+    $modal.foundation('open');
+}
+</script>
