@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/SO_DSGN/ghost.so_dsgn.git"
+    "url": "git@github.com:s-oehding/so_dsgn-ghost.git"
   },
   "keywords": [
     "ghost",
@@ -25,9 +25,9 @@
   "author": "Soeren Oehding",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/SO_DSGN/ghost.so_dsgn/issues"
+    "url": "https://github.com/s-oehding/so_dsgn-ghost/issues"
   },
-  "homepage": "https://gitlab.com/SO_DSGN/ghost.so_dsgn#README",
+  "homepage": "https://github.com/s-oehding/so_dsgn-ghost",
   "devDependencies": {
     "autoprefixer": "^6.6.1",
     "babel-core": "^6.21.0",
