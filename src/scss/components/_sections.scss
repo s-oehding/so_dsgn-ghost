@@ -1,0 +1,132 @@
+/*********************
+GLOBAL SECTION STYLES
+*********************/
+#main{
+    min-height: 100vh;
+    overflow: hidden;
+}
+section {
+    width: 100%;
+    background: $body-background;
+    position: relative;
+    &.has-parallax{
+        background:transparent;
+    }
+    &.layout-row-top{
+        padding: 4rem 0;
+        @include flex-grid-row();
+        @include flex-align(justify, stretch);
+        min-height: 100%;
+    }
+
+    &.layout-row-center{
+        padding: 10rem 0;
+        min-height: rem-calc(450);
+        @include flex-grid-row();
+        @include flex-align(justify, middle);
+    }
+
+    .section-content {
+        padding: 8 rem 0;
+        // height:100vh;
+    }
+    &#welcome {
+        &::before{
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: -3.5rem;
+            width: 110%;
+            height: 6em;
+            background: $black;
+            border-top: 4px solid $primary-color;
+            box-shadow: 0 -0.5rem 0.75rem rgba(50, 50, 50, 0.25);
+            transform: rotate(-2deg);
+            @include transition(all 0.5s ease-in-out);
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            left: -3rem;
+            bottom: -3.5rem;
+            width: 110%;
+            height: 8em;
+            background: $white;
+            border-top: 4px solid $primary-color;
+            box-shadow: 0 -0.5rem 0.75rem rgba(50, 50, 50, 0.25);
+            transform: rotate(-2deg);
+            @include transition(all 0.5s ease-in-out);
+        }
+    }
+    &#portfolio {
+        overflow: hidden;
+    }
+
+    &.row-slider{
+        padding: 5rem 0;
+        margin-right: 0;
+        margin-left: 0;
+        // min-height: rem-calc(450);
+        @include flex-grid-row();
+        @include flex-align(justify, middle);
+        max-width: 100%;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: -3rem;
+            width: 110%;
+            height: 9em;
+            background: $white;
+            border-top: 4px solid $primary-color;
+            box-shadow: 0 -0.5rem 0.75rem rgba(50, 50, 50, 0.25);
+            transform: rotate(-182deg);
+            @include transition(all 0.5s ease-in-out);
+            z-index: 2;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            left: -3rem;
+            bottom: -2.55rem;
+            width: 110%;
+            height: 13em;
+            background: $white;
+            border-top: 4px solid $primary-color;
+            box-shadow: 0 -0.5rem 0.75rem rgba(50, 50, 50, 0.25);
+            transform: rotate(-2deg);
+            @include transition(all 0.5s ease-in-out);
+            z-index: 2;
+        }
+    }
+    &.dark {
+        background: $black;
+        color: $white;
+        
+        blockquote {
+            p {
+                color: $white;
+            }
+        }
+    }
+}
+
+.border-left {
+    border-left: 4 px solid $primary-color;
+    padding-left: .5 rem;
+    padding-right: .5 rem;
+    margin-bottom: 2 rem;
+}
+
+.border-right {
+    border-right: 4 px solid $primary-color;
+    padding-left: .5 rem;
+    padding-right: .5 rem;
+    margin-bottom: 2 rem;
+}
+
+.shadow {
+    @include box-shadow(0, 0.1rem, 0.5rem, rgba(5,5,5, 0.75));
+    @include box-shadow(0, -0.1rem, -0.5rem, rgba(5,5,5, 0.75));
+}

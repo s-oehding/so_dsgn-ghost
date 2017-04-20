@@ -1,32 +1,46 @@
 <section class="row-slider">
-    <div class="small-12 columns ml-slider owl-carousel owl-theme">
+    <div class="small-12 columns ml-slider owl-carousel owl-theme no-pad">
         {{#foreach posts}}
             {{#has tag="portfolio"}}
             <article class="slider-item {{post_class}}">
                 {{#if image}}
-                <a href="{{url}}" class="post-image">
-                    <img class="slider-image" src="{{image}}" alt="">
-                    <span class="title-wrapper">
-                        <h2 class="post-title">{{{title}}}</h2>
-                    </span>
-                </a>{{else}}
-                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-                {{/if}}
-                <section class="post-meta">
-{{!--                     <span class="date"><i class="fa fa-clock-o"></i> <a href="{{url}}"><time class="timesince" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMMM YYYY'}}">{{date published_at timeago='true'}}</time></a></span>
-                    {{#author}}<span class="author"><i class="fa fa-user"></i> <a href="{{url}}">{{name}}</a></span>{{/author}} --}}
-                    {{#if tags}}
-                    {{!-- <hr> --}}
-                    <span class="tags">
-                        <div class="tags small button-group">
-                            <i class="label fa fa-tags"></i>
-                            {{#foreach tags}}
-                                <a href="{{url}}" title="{{name}}" class="label tag-{{id}}">{{name}}</a>
-                            {{/foreach}}
-                        </div>
-                    </span>
+                <div class="image-wrapper">
+                    <a href="{{url}}" class="post-image">
+                        <img class="slider-image" src="{{image}}" alt="">
+                    </a>
+                    <span class="overlay">
+                        <a href="{{url}}" class="post-link"><h2 class="post-title">{{{title}}}</h2></a>
+                        <hr>
+                        {{#if tags}}
+                        <span class="tags">
+                            <div class="tags small button-group">
+                                <i class="label fa fa-tags"></i>
+                                {{#foreach tags}}
+                                    <a href="{{url}}" title="{{name}}" class="label tag-{{id}}">{{name}}</a>
+                                {{/foreach}}
+                            </div>
+                        </span>
+                    </div>
                     {{/if}}
-                </section>
+                </span>
+                {{else}}
+                <div class="post-title">
+                    <a href="{{url}}">{{{title}}}</a>
+                    <hr>
+                    <section class="post-meta">
+                        {{#if tags}}
+                        <span class="tags">
+                            <div class="tags small button-group">
+                                <i class="label fa fa-tags"></i>
+                                {{#foreach tags}}
+                                    <a href="{{url}}" title="{{name}}" class="label tag-{{id}}">{{name}}</a>
+                                {{/foreach}}
+                            </div>
+                        </span>
+                        {{/if}}
+                    </section>
+                </div>
+                {{/if}}
             </article>
             {{/has}}
         {{~/foreach}}

@@ -1,32 +1,21 @@
-<div id="top" class="post-header">
-{{#tag}}
-    <div class="header-image parallax-window" data-parallax="scroll" {{#if image}} data-image-src="{{image}}" {{else}}data-image-src="http://placekitten.com/g/1920/1080" {{/if}}></div>
-    <section class="meta">
-        <div class="post-title-content os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.25s">
-            <h1 class="">{{{title}}}</h1><h1 class="">{{{name}}}</h1>
-        </div>
-        <hr>
-    </section>
-    {{/tag}}
-</div>
 <section id="feed" class="layout-row-center feed">
     {{#foreach posts}}
-    <article class="row {{post_class}}">
-        <div class="card" data-equalizer-watch>
-            <div class="medium-5 columns post-image no-pad">
+    <article class="{{post_class}}">
+        <div class="row card">
+            <div class="small-12 medium-6 columns post-image no-pad">
                 <div class="card-image">
                     <a href="{{url}}" class="post-link" title="{{{title}}}" alt="{{{title}}}">
                         <img src="{{image}}" title="{{{title}}}" alt="{{{title}}}">
                     </a>
                 </div>
             </div>
-            <div class="card-content medium-7 columns">
+            <div class="small-12 medium-6 columns card-content ">
                 <section class="post-content">
-                    <a href="{{url}}" class="post-link" title="{{{title}}}" alt="{{{title}}}"><h2 class="post-title">{{{title}}}</h2></a>
-                    {{excerpt words=25}}…
+                    <a href="{{url}}" class="post-link" title="{{{title}}}" alt="{{{title}}}"><h3 class="post-title">{{{title}}}<hr class="h-line"></h3></a>
+                    <p>{{excerpt words=25}}…</p>
                 </section>
                 <section class="post-meta callout">
-                    <span class="date"><i class="fa fa-clock-o"></i> <a href="{{url}}"><time class="timesince" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMMM YYYY'}}">{{date published_at timeago='true'}}</time></a></span>
+                    - <span class="date"><i class="fa fa-clock-o"></i> <a href="{{url}}"><time class="timesince" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMMM YYYY'}}">{{date published_at timeago='true'}}</time></a></span>
                     {{#author}}<span class="author"><i class="fa fa-user"></i> <a href="{{url}}">{{name}}</a></span>{{/author}}
                     {{#if tags}}<span class="tags"><i class="fa fa-tags"></i>
                         <span>

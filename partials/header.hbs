@@ -1,4 +1,4 @@
-<div class="main-nav small-12">
+<nav class="main-nav small-12">
     <div class="title-bar" data-responsive-toggle="top-bar-menu" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle></button>
         <div class="title-bar-title">Menu</div>
@@ -15,7 +15,7 @@
                 </li>
             </ul>
         </div>
-        <div class="top-bar-left">
+        <div class="top-bar-left" data-accordion-menu>
             {{#is "home"}} {{> navigation-home}} {{else}} {{navigation}} {{/is}}
         </div>
         <div class="top-bar-right align-right show-for-medium">
@@ -23,4 +23,4 @@
             </ul>
         </div>
     </div>
-</div>
+</nav>

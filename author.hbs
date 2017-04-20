@@ -1,17 +1,17 @@
 {{!< default}}
-<header id="header" class="animated fadeIn"{{#if author.cover}} style="background-image: url({{author.cover}})"{{/if}}>
-    <div class="header-background">
-    <section class="blog-content">
-        <a id="site-url" class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a>
-        <span class="blog-description">{{@blog.description}}</span>
-        {{> links}}
-    </section>
-    <section class="header-content">
-        <h1 class="post-title animated fadeInUp">{{author.name}}</h1>
-        <span class="post-data animated fadeInUp">{{author.bio}}</span>
-    </section>
-    </div>
-</header>
+<div id="top" class="post-header">
+	{{#author}}
+	<div class="parallax">
+		<figure class="parallax-background parallax-window" {{#if author.cover}}style="background-image: url({{author.cover}});"{{else}}style="background-image: url('http://placekitten.com/g/1280/720');" {{/if}} alt="" style="display: none; visibility: hidden;"></figure>
+	</div>
+	<section class="triangle">
+	    <div class="post-title-content os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.25s">
+	        <h1 class="">{{{title}}}</h1><h1 class="">{{{name}}}</h1>
+	    </div>
+	    <hr>
+	</section>
+	{{/author}}
+</div>
 <main id="main" class="archive">
     {{> loop}}
 </main>

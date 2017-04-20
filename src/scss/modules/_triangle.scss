@@ -1,0 +1,22 @@
+.triangle {
+    background: $white;
+    padding: rem-calc(20);
+    position: relative;
+    @include transition(all 0.5s ease-in-out);
+    .label {
+        margin-right: rem-calc(2.5);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        left: -3rem;
+        top: -3.5rem;
+        width: 110%;
+        height: 6em;
+        background: #fff;
+        border-top: 4px solid $primary-color;
+        box-shadow: 0 -0.5rem 0.75rem rgba(50, 50, 50, 0.25);
+        transform: rotate(-2deg);
+        @include transition(all 0.5s ease-in-out);
+    } 
+}

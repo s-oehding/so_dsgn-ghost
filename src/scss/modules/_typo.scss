@@ -1,0 +1,29 @@
+.headline{
+	font-size: 8rem;
+	line-height: 7.5rem;
+}
+
+.section-title {
+	margin-bottom: 3rem;
+}
+
+.h-line{
+	border-bottom: 2px solid $primary-color;
+	width: 5rem;
+	padding-top: 1rem;
+	margin:0;
+}
+
+.links {
+	ul {
+		list-style-type: none;
+		margin-left: .25rem;
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+#typed {
+	margin-left: .25rem;
+}

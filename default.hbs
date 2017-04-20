@@ -8,34 +8,29 @@
         
         <title>{{meta_title}}</title>
         <meta name="description" content="{{meta_description}}" />
-        <link href="{{asset 'assets/dist/css/styles.css'}}" rel="stylesheet" type="text/css">
+        {{!-- <link href="{{asset 'assets/css/styles.css'}}" rel="stylesheet" type="text/css"> --}}
         <link href="{{asset 'images/favicon.png'}}" rel="shortcut icon">
-        <script src="{{asset 'bower/modernizr/modernizr.js'}}"></script>
+
         {{ghost_head}}
+        <script type="text/javascript">
+            window._themeConfig = {
+                "disqusUsername": null,
+                "googleAnalyticsId": null,
+                "alternateSubscribeLink": null
+            };
+        </script>
     </head>
     <body class="{{body_class}}">
-        <div id="loader"></div>
-        {{> header}}
-        {{{body}}}
-        {{> footer}}
-        {{ghost_foot}}
-        <script type="text/javascript">  
-            if (typeof jQuery == 'undefined') {
-                document.write('<script type="text/javascript" src="{{asset "bower/jquery/dist/jquery.js"}}"></'+'script>');
-            }
-        </script>
-        <script src="{{asset 'bower/foundation-sites/dist/foundation.js'}}"></script>
-        <script src="{{asset 'bower/motion-ui/dist/motion-ui.js'}}"></script>
-        <script src="{{asset 'bower/what-input/what-input.js'}}"></script>
-        <script src="{{asset 'bower/nprogress/nprogress.js'}}"></script>
-        <script src="{{asset 'bower/parallax.js/parallax.js'}}"></script>
-        <script src="{{asset 'bower/typed.js/js/typed.js'}}"></script>
-        <script src="{{asset 'bower/waypoints/lib/jquery.waypoints.js'}}"></script>
-        <script src="{{asset 'bower/owl.carousel/dist/owl.carousel.js'}}"></script>
-        <script src="{{asset 'bower/headroom.js/dist/headroom.js'}}"></script>
-        <script src="{{asset 'bower/headroom.js/dist/jQuery.headroom.js'}}"></script>
-        <script src="{{asset 'js/backgroundVideo.min.js'}}"></script>
-        <script src="{{asset 'js/animations.js'}}"></script>
+    <div id="body-class" class="{{body_class}}"></div>
+        {{!-- <div id="loader"></div> --}}
+        <div id="ajax-container" style="display:none;">
+            {{> header}}
+            {{{body}}}
+            {{> footer}}
+            {{ghost_foot}}
+        </div>
+        <script src="{{asset 'js/common.js'}}"></script>
         <script src="{{asset 'js/main.js'}}"></script>
+        {{>google-analytics}}
     </body>
 </html>

@@ -1,0 +1,47 @@
+.content{
+    background: $white;
+    overflow: hidden;
+}
+
+.post-title-content {
+    text-align: center;
+    background: $white;
+}
+
+// .post-title {
+//     position: absolute;
+//     width: 100%;
+//     top: 50%;
+// }
+
+.post-content{
+    margin-top: 0srem;
+}
+
+aside {
+    .author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        a {
+            display: block;
+        }
+        .author-thumb {
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            border: 2px solid $medium-gray;
+            padding: .2rem;
+        }
+        .author-name {
+            font-weight: bold;
+            display: inline-block;
+        }
+        time {
+            display: inline-block;
+        }
+    }
+    .date {
+        display: block;
+    }
+}

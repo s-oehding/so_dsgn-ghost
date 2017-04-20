@@ -1,0 +1,89 @@
+.ml-slider {
+    .slider-item {
+        position:relative;
+        overflow: hidden;
+        @include transition(all 0.5s ease-in-out);
+        .image-wrapper {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            width: auto;
+            .post-image {
+                background-size: cover;
+                img {
+                    @include transition(all 0.5s ease-in-out);
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .overlay{
+                background: rgba(0,0,0,0);
+                position: absolute;
+                width: 100%;
+                top: 0;
+                // transform: translateY(-100%);
+                
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                @include transition(all 0.5s ease-in-out);
+                .post-title, .tags {
+                    vertical-align: top;
+                    text-align: center;
+                    transform: scale(0);
+                    color: $white;
+                    @include transition(all 0.5s ease-in-out);
+                }
+                .label {
+                    margin-right: rem-calc(2.5);
+                }
+        }
+        // .post-title {
+        //     color: $white;
+        //     position: absolute;
+        //     width: 100%;
+        //     top: 33%;
+        // }
+        
+        }
+        &:hover {
+            .overlay {
+                // transform: translateY(0);
+                background: rgba(0,0,0,0.5);
+                // transform: scale(1);
+                .post-title, .tags {
+                    transform: scale(1);
+                }
+            }
+            .post-image{
+            	img{
+            		transform: scale(1.1);
+            	}
+            }
+            .post-meta{
+                transform: translateY(-100%);
+            }
+        }
+    }
+}
+
+@include breakpoint(small) {
+    .image-wrapper {
+        height: 80vh;
+    }
+}
+
+@include breakpoint(medium) {
+    .image-wrapper {
+        height: 100vw;
+    }
+}
+
+@include breakpoint(large) {
+    .image-wrapper {
+        height: 45vw;
+    }
+}

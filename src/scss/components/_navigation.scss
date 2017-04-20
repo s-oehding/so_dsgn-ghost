@@ -1,0 +1,134 @@
+/*********************
+NAVIGATION STYLES
+*********************/
+body{
+	&:not(.home-template) {
+		.top-bar{
+		background: rgba(255,255,255, 0.9);
+		}
+	}
+}
+
+.top-bar {
+	ul {
+		background: rgba(255,255,255, 0);
+	}
+	width:100%;
+	max-width: 100vw;
+	height: rem-calc(60);
+	padding:0 .5rem;
+	.top-bar-title{
+		width: 100%;
+		background: rgba(255,255,255, 0.9);
+	}
+	.title-area {
+		z-index: 1;
+	}
+	.top-bar-left{
+		height: 100%;
+	}
+	.site-logo{
+		width: 100%;
+		.blog-logo{
+			padding: 0;
+			img{
+				width: rem-calc(100);
+				height: rem-calc(100);
+				padding: 1rem;
+				margin: 0 auto;
+			}
+		}
+	}
+	.menu{
+		height: 100%;
+		.menu-item{
+			height: 100%;
+			border-bottom: rem-calc(2) solid transparent;
+			display: flex;
+			align-items: center;
+			background: rgba(255,255,255, 0.9);
+			@include transition(all 0.5s ease-in-out);
+			a{
+				color: $black;
+				border-bottom: 2px solid transparent;
+				@include transition(all 0.5s ease-in-out);
+				&.active{
+					color: $primary-color;
+					@include transition(all 0.5s ease-in-out);
+				}
+			}
+			&:hover, &:active, &.active{
+				color: $primary-color;
+				border-bottom: rem-calc(2) solid $primary-color;
+				a{
+					color: $primary-color;
+					@include transition(all 0.5s ease-in-out);
+					background: transparent;
+				}
+			}
+		}
+	}
+	@include transition(all 0.5s ease-in-out);
+}
+
+@include breakpoint(medium) {
+	.top-bar{
+		.top-bar-title{
+			width: auto;
+			background: transparent;
+		}
+		.site-logo{
+			width: 100%;
+			.blog-logo{
+				padding: 0;
+				img{
+					width: rem-calc(40);
+					height: rem-calc(40);
+					padding: .1rem;
+					margin: 0 auto;
+				}
+			}
+		}
+		.menu{
+			.menu-item{
+				background: transparent;
+				display: inline-flex;
+			}	
+		}
+		&.scrolled{
+			background: rgba(255,255,255, 0.9);
+			.menu-item{
+				background: transparent;
+				&:hover{
+					background: rgba(255,255,255, 1);
+				}
+			}
+		}
+
+		.site-logo{
+			.blog-logo{
+				padding: 0;
+				img{
+					width: rem-calc(40);
+					height: rem-calc(40);
+				}
+			}
+		}
+	}
+}
+
+// @media screen and (max-width: 39.9375em) {
+// 	.top-bar{
+// 		background: rgba(255, 255, 255, .9);
+// 	}
+// }
+
+// @media screen and (min-width: 40em) {
+//   .no-js .top-bar {
+//     display: block;
+//   }
+
+//   .title-bar {
+//     display: none;
+//   }
+// }

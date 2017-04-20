@@ -1,52 +1,65 @@
 {{!< default}}
 {{#post ~}}
+<main class="content" role="main">
 <div id="top" class="post-header">
-    <div class="header-image parallax-window" data-parallax="scroll" {{#if image}} data-image-src="{{image}}" {{else}}data-image-src="http://placekitten.com/g/1920/1080" {{/if}}></div>
-    <section class="meta">
-        <div class="post-title-content os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.25s">
-            <h1 class="">{{{title}}}</h1>
-        </div>
-        <hr>
-    </section>
-    {{!-- <div class="post-title os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.25s">
-        <h1 class="">{{{title}}}</h1>
-    </div> --}}
+    <div class="parallax">
+        <figure class="parallax-background parallax-window" {{#if image}}style="background-image: url({{image}}{{else}}http://placekitten.com/g/1920/1080{{/if}});" alt="" style="visibility: hidden;"></figure>
+    </div>
 </div>
 <section class="post">
+    <section class="triangle"></section>
+    <div class="post-title-content os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.25s">
+        <h1 class="">{{{title}}}</h1>
+    </div>
+    <hr>
     <section id="post-content" class="layout-row-top">
-        
-
-        <article itemtype="http://schema.org/BlogPosting" class="content post {{post_class}} medium-8 small-12 columns">
-            <div id="post" class="post-content">
+        <article id="post" itemtype="http://schema.org/BlogPosting" class="content post {{post_class}} medium-8 small-12 columns">
+            <div class="post-content">
                 {{content}}
             </div>
         </article>
-        <aside class="medium-4 small-12 right columns" data-sticky-container>
-            <div class="sticky post-meta" data-sticky data-sticky-on="small" data-anchor="post" data-margin-top="5" style="width: 100%;">
-                <h5>Meta:</h5>
-                <hr>
-                <span class="date">
-                    <i class="fa fa-clock-o"></i>
-                    <time class="timesince date" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='DD MMMM YYYY'}}">{{date published_at timeago='true'}}</time>
-                </span>
-                <br/><br/><br/>
-                {{#author}}<span class="author"><i class="fa fa-user"></i> <a href="{{url}}">{{name}}</a></span>{{/author}}
-                <br/><br/><br/>
-                <h5>Tags:</h5>
-                <hr>
+        <aside class="medium-4 small-12 right columns">
+            <div class="sticky post-meta row">
+                <div class="small-12 columns sidebar-title">
+                    <h5>Meta:</h5>
+                    <hr>
+                </div>
+                <div class="author small-12 columns">
+                    {{#if author.image}}
+                        <img class="author-thumb small-7 columns" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />
+                    {{/if}}
+                    <span class="small-7 columns">
+                        {{author}}
+                        <span>
+                        <i class="fa fa-clock-o"></i> <time class="timesince date" data-timesince="{{date format='X'}}" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='DD MMMM YYYY'}}">{{date published_at timeago='true'}}</time>
+                        </span>
+                    </span>
+                </div>
                 {{#if tags}}
+                <div class="small-12 columns sidebar-title">
+                    <h5>Tags:</h5>
+                    <hr>
+                </div>
+                <div class="tags small-12 columns">
                     <div class="tags small button-group">
                         {{#foreach tags}}
                             <a href="{{url}}" title="{{name}}" class="button tag-{{id}}">{{name}}</a>
                         {{/foreach}}
                     </div>
-                {{/if}}
-              <div id="read-progress" class="progress" role="progressbar" tabindex="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-meter"></div>
                 </div>
-            </div>
+                {{/if}}
+                <div class=" small-12 columns">
+                <div class="progress">
+                    <div id="read-progress" class="progress" role="progressbar" tabindex="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-meter"></div>
+                    </div>
+                    <div class="post-reading-time">
+                    <div class="estimated-reading-time"></div>
+                    <div class="word-count"></div>
+                </div>
         </aside>
     </section>
 </section>
+</main>
 {{~/post}}
 

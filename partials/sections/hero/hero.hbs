@@ -1,20 +1,21 @@
 <div id="top" class="hero-wrapper show-for-medium">
-  {{!-- <div class="header-image parallax-window animated fadeIn" data-parallax="scroll" {{#if @blog.cover}} data-image-src="{{@blog.cover}}" {{else}}data-image-src="http://placekitten.com/g/4096/2304" {{/if}}> --}}
-  <img class="parallax-background header-image" src="{{@blog.cover}}" alt="" style="visibility: hidden;">
+  <div class="parallax">
+    <div class="parallax-background header-image" style="background-image: url({{@blog.cover}});" alt="" style="display: none; visibility: hidden;"></div>
+  </div>
     <div class="header-image-overlay">
         <div class="header-image-text">
             <h1>Søren Oehding</h1>
-            <h2>
+            <h4>
             <div id="strings" style="display:none;">
               <p>Webdesign</p>
               <p>Grafikdesign</p>
               <p>Fotografie</p>
               <p>E-Commerce</p>
             </div>
-            <span id="typed">
-            </span>
-            </h2>
+            <span id="typed"></span>
+            </h4>
         </div>
+        {{>links}}
     </div>
     <div class="arrow-down" data-magellan>
         <a href="#welcome-text"><i class="fa fa-chevron-down animated bounceInUp"></i></a>
