@@ -1,4 +1,5 @@
 "use strict";
+import 'font-awesome/scss/font-awesome.scss';
 /*
  import 'font-awesome/css/font-awesome.css'
  import 'font-awesome/css/font-awesome.css'
