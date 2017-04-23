@@ -1,17 +1,113 @@
 {{!< default}}
-<div id="top" class="post-header">
-	{{#author}}
-	<div class="parallax">
-		<figure class="parallax-background parallax-window" {{#if author.cover}}style="background-image: url({{author.cover}});"{{else}}style="background-image: url('http://placekitten.com/g/1280/720');" {{/if}} alt="" style="display: none; visibility: hidden;"></figure>
-	</div>
-	<section class="triangle">
-	    <div class="post-title-content os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.25s">
-	        <h1 class="">{{{title}}}</h1><h1 class="">{{{name}}}</h1>
-	    </div>
-	    <hr>
-	</section>
-	{{/author}}
-</div>
+{{> sections/hero/author-header}}
+
 <main id="main" class="archive">
-    {{> loop}}
+  <section class="row">
+    <div class="small-12 columns">
+      <h1>CV</h1>
+    </div>
+  </section>
+  <section class="row">
+    <section class="small-12 columns timeline">
+      <h3 class="section-title">Experience / Education<hr class="h-line"></h3>
+      <ul>
+        <li class="right">
+          <span class="revealer period" data-animation-in="fadeIn" data-os-animation-delay="0.25s">
+            t: <time datetime="now">present</time><br>
+            f: <time datetime="2013-01-01">01 / 2013</time>
+          </span>
+          <div class="revealer" data-animation-in="fadeInLeft" data-os-animation-delay="0.25s">
+            <p><strong>Freelance Frontend Developer / Web Developer</strong></p>
+            <p>SO_DSGN <i class="fa fa-building-o" aria-hidden="true"></i></p>
+            <a href="#">Link <i class="fa fa-link" aria-hidden="true"></i></i></a>
+          </div>
+        </li>
+        <li class="left">
+          <span class="revealer period" data-animation-in="fadeIn" data-os-animation-delay="0.25s">
+            t: <time datetime="now">present</time><br>
+            f: <time datetime="2014-10">10 / 2014</time>
+          </span>
+          <div class="revealer" data-animation-in="fadeInLeft" data-os-animation-delay="0.25s">
+            <p><strong>Bachelor of Arts in Graphics and Design</strong></p>
+            <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i> focusing on digital applications</p>
+            <p><i class="fa fa-building-o" aria-hidden="true"></i> FH Diploma Nordhessen</p>
+          </div>
+        </li>
+        <li class="right">
+          <span class="revealer period" data-animation-in="fadeIn" data-os-animation-delay="0.25s">
+            t: <time datetime="2016-12">12 / 2016</time><br>
+            f: <time datetime="2015-10">10 / 2015</time>
+          </span>
+          <div class="revealer" data-animation-in="fadeInLeft" data-os-animation-delay="0.25s">
+            <p><strong>Web Developer - Shopware Frontend</strong></p>
+            <p> </p>
+            <p>GRES Spanienfliesen GmbH - Mannheim <i class="fa fa-building-o" aria-hidden="true"></i></p>
+            <a href="#">Link <i class="fa fa-link" aria-hidden="true"></i></i></a>
+          </div>
+        </li>
+        <li class="left">
+          <span class="revealer period" data-animation-in="fadeIn" data-os-animation-delay="0.25s">
+            t: <time datetime="2014-10">10 / 2014</time><br>
+            f: <time datetime="2013-10">10 / 2013</time>
+          </span>
+          <div class="revealer" data-animation-in="fadeInLeft" data-os-animation-delay="0.25s">
+            <p><strong>Bachelor of Arts in Media Informatics</strong></p>
+            <p> </p>
+            <p><i class="fa fa-building-o" aria-hidden="true"></i> HSKA - Karlsruhe</p>
+          </div>
+        </li>
+        <li class="right">
+          <span class="revealer period" data-animation-in="fadeIn" data-os-animation-delay="0.25s">
+            t: <time datetime="2015-10">10 / 2015</time><br>
+            f: <time datetime="2013-08">08 / 2013</time>
+          </span>
+          <div class="revealer" data-animation-in="fadeInLeft" data-os-animation-delay="0.25s">
+            <p><strong>Web Developer - Magento Frontend</strong></p>
+            <p> </p>
+            <p>Innovative Training Systems - Heidelberg <i class="fa fa-building-o" aria-hidden="true"></i></p>
+            <a href="#">Link <i class="fa fa-link" aria-hidden="true"></i></i></a>
+          </div>
+        </li>
+        <li class="right">
+          <span class="revealer period" data-animation-in="fadeIn" data-os-animation-delay="0.25s">
+            t: <time datetime="2012-12">12 / 2012</time><br>
+            f: <time datetime="2012-02">01 / 2012</time>
+          </span>
+          <div class="revealer" data-animation-in="fadeInLeft" data-os-animation-delay="0.25s">
+            <p><strong>Cutter / DIT</strong></p>
+            <p>Magicfarm GmbH - Hamburg <i class="fa fa-building-o" aria-hidden="true"></i></p>
+            <a href="#">Link <i class="fa fa-link" aria-hidden="true"></i></i></a>
+          </div>
+        </li>
+        <li class="left">
+          <span class="revealer period" data-animation-in="fadeIn" data-os-animation-delay="0.25s">
+            t: <time datetime="2012-01">01 / 2012</time><br>
+            f: <time datetime="2009-09">09 / 2009</time>
+          </span>
+          <div class="revealer" data-animation-in="fadeInLeft" data-os-animation-delay="0.25s">
+            <p><strong>Training Sound and Image Media Designer</strong></p>
+            <p> </p>
+            <p><i class="fa fa-building-o" aria-hidden="true"></i> Magicfarm GmbH - Hamburg</p>
+          </div>
+        </li>
+        <li class="left">
+          <span class="revealer period" data-animation-in="fadeIn" data-os-animation-delay="0.25s">
+            t: <time datetime="2009-09">09 / 2009</time><br>
+            f: <time datetime="2009-09">09 / 2006</time>
+          </span>
+          <div class="revealer" data-animation-in="fadeInLeft" data-os-animation-delay="0.25s">
+            <p><strong>Audio Engineer - Diploma</strong></p>
+            <p> </p>
+            <p><i class="fa fa-building-o" aria-hidden="true"></i> SAE - Hamburg</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <section class="row">
+    <section class="small-12 medium-6 columns skills">
+
+    </section>
+  </section>
 </main>
+

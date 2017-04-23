@@ -31,14 +31,11 @@ exports.onScrollInit = function( items, trigger ) {
      
         //check to see if this current container is within viewport
         if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
-          
-          $element.removeClass(animateOutClass);
           $element.addClass(animateInClass);
           $element.addClass('animated');
         } else {
             $element.removeClass(animateInClass);
-            $element.addClass(animateOutClass).delay(animationDelay);
-            // $element.removeClass('animated');
+            $element.removeClass('animated');
         }
       });
     }

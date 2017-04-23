@@ -26,6 +26,14 @@ section {
         @include flex-align(justify, middle);
     }
 
+    &.layout-row-full-width{
+        padding: 2rem 0;
+        min-height: rem-calc(450);
+        @include flex-grid-row();
+        max-width: 85%;
+        @include flex-align(justify, middle);
+    }
+
     .section-content {
         padding: 8 rem 0;
         // height:100vh;
