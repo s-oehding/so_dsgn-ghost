@@ -2,9 +2,11 @@
     @include transition(all 0.5s ease-in-out);
     .teaser-wrapper {
         position: relative;
+        width: 100%;
         overflow: hidden;
         img {
             transform: scale(1);
+            width: 100%;
             @include transition(all 0.5s ease-in-out);
         }
         .teaser-overlay {

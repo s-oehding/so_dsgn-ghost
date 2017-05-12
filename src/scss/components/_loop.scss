@@ -23,6 +23,7 @@ section {
                         transition: all ease-in-out 0.2s;
                         position:relative;
                         height: 18vw;
+                        width: 100%;
                         object-fit: cover;
                     }
                     &::after{
