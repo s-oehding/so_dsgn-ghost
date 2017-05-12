@@ -65,6 +65,14 @@ section {
             transform: rotate(-2deg);
             @include transition(all 0.5s ease-in-out);
         }
+        @include breakpoint(small only) {
+            &::before{
+                left: 0rem;
+            }
+            &::after{
+                left: 0rem;
+            }
+        }
     }
     &#portfolio {
         overflow: hidden;
@@ -106,6 +114,14 @@ section {
             transform: rotate(-2deg);
             @include transition(all 0.5s ease-in-out);
             z-index: 2;
+        }
+        @include breakpoint(small only) {
+            &::before{
+                left: 0rem;
+            }
+            &::after{
+                left: 0rem;
+            }
         }
     }
     &.dark {
